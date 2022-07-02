@@ -1,7 +1,7 @@
 <?php
 class Have{
+     private $id_need;
     private $id_partyitem;
-    private $id_need;
     private $placement;
  
     

@@ -4,15 +4,15 @@ include './header/homeHeader.php';
 <body>
     
  <section>
-    <div class="notranslate">P</div>
-    <div class="notranslate">A</div>
-    <div class="notranslate">R</div>
-    <div class="notranslate">T</div>
-    <div class="notranslate">Y</div>
-    <div class="notranslate">T</div>
-    <div class="notranslate">I</div>
-    <div class="notranslate">M</div>
-    <div class="notranslate">E</div>
+    <div>P</div>
+    <div>A</div>
+    <div>R</div>
+    <div>T</div>
+    <div>Y</div>
+    <div>T</div>
+    <div>I</div>
+    <div>M</div>
+    <div>E</div>
 </section>
 
 <section>

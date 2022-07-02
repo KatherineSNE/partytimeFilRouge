@@ -3,7 +3,7 @@
 class Blocked{
     private $id_blocked_user;
     private $ip_blocked_user;
-   
+    private $id_user;   
 
 public function getId(){
     return $this->id_blocked_user;
@@ -21,13 +21,22 @@ public function setIp($newIp){
     $this->ip_blocked_user = $newIp;
 }
 
+public function getIdUser(){
+    return $this->id_user;
+}
+
+public function setIdUser($newIdUser){
+    $this->id_user=$newIdUser;
+}
+
 
 public function createBlocked($bdd){
     try{
-        $block=$bdd->prepare('INSERT INTO blocked_user(ip_blocked_user)
-                            VALUES(:ip_blocked_user)');
+        $block=$bdd->prepare('INSERT INTO blocked_user(ip_blocked_user, id_user)
+                            VALUES(:ip_blocked_user, :id_user)');
                         $block->execute(array(
                             ':ip_blocked_user'=>$this->ip_blocked_user,
+                            ':id_user'=>$this->id_user,
                         ));                    
     }
     catch(exception $e){

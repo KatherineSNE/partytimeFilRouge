@@ -63,3 +63,7 @@ p{
 label{
     margin: 3vh 0 0 0;
 }
+
+input:-webkit-autofill {       
+    transition: all 0s 50000s;     
+  }
