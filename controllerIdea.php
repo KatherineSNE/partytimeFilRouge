@@ -4,6 +4,7 @@ include './config/connexion.php';
 include './model/curateClass.php';
 include './view/ideas.php';
 
+
 if(isset($_POST['id_partyitem'])&&isset($_SESSION['id'])){
     $idea = new Curate();
      

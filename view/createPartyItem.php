@@ -10,15 +10,15 @@ include './view/menuAdmin.php';
             <p>Type 1 = shot  ->  Type 2 = food  ->  Type 3 = Idea</p>
             <form action="" method="POST">
                 <label  for="name_partyitem">Name</label>
-                <input class="input" type="text" name="name_partyitem">
+                <input  class="input" type="text" name="name_partyitem" pattern ="(?=.*\d)(?=.*[A-Za-z0-9-]){1,}">
                 <label for="image_partyitem">Image</label>
-                <input class="input" type="file" name="image_partyitem">
+                <input  class="input" type="file" name="image_partyitem">
                 <label for="description_partyitem">Description</label>
-                <textarea class="input" rows="auto" cols="1" name="description_partyitem"></textarea>
+                <textarea class="input" rows="auto" cols="1" name="description_partyitem" pattern ="(?=.*\d)(?=.*[a-z0-9-])(?=.*[A-Z]).{1,}"></textarea>
                 <label  for="visibility_partyitem">Visible</label>
-                <input class="input" type=tel name="visibility_partyitem" value=1>
+                <input  class="input" type=tel name="visibility_partyitem" value=1 pattern ="(?=.*[0-1]){1,1}">
                 <label  for="id_typeitem">Type</label>
-                <input class="input" type=tel name="id_type_partyitem">
+                <input  class="input" type=tel name="id_type_partyitem" pattern ="(?=.*[0-9]){1,2}">
                 <button type="submit" name="add_partyitem">Ajouter</button>
             </form>
 

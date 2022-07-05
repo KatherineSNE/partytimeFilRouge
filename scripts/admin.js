@@ -1,4 +1,4 @@
-const url = "apiPAR.php";
+const url = "apiAllPar.php";
 async function showpartyItem(){
 const par = await fetch(url);
 const infopar = await par.json();

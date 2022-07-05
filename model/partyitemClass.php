@@ -57,31 +57,30 @@ public function setType($newType){
     $this->id_type_partyitem = $newType;
 }
 
-public function createPartyitem($bdd){
+public function createPartyitem($bdd, $name, $im ,$des, $vis, $ity){
 try{    
-        $req = $bdd->prepare('INSERT INTO partyitem(image_partyitem, name_partyitem,description_partyitem,
+        $req = $bdd->prepare('INSERT INTO partyitem(name_partyitem, image_partyitem,description_partyitem,
                                           visibility_partyitem,id_type_partyitem)
-                    VALUES (:image_partyitem,:name_partyitem,:description_partyitem,:visibility_partyitem,
+                    VALUES (:name_partyitem,:image_partyitem,:description_partyitem,:visibility_partyitem,
                             :id_type_partyitem)');
-        $req->execute(array(
-                            'image_partyitem'=>$this->image_partyitem,
-                            ':name_partyitem'=>$this->name_partyitem,
-                            ':description_partyitem'=>$this->description_partyitem,
-                            ':visibility_partyitem'=>$this->visibility_partyitem,
-                            ':id_type_partyitem'=>$this->id_type_partyitem     
-                            ));
-        
+      
+                            $req->bindParam(':name_partyitem', $name, PDO::PARAM_STR);
+                            $req->bindParam(':image_partyitem', $im, PDO::PARAM_STR);
+                            $req->bindParam(':description_partyitem', $des, PDO::PARAM_STR);
+                            $req->bindParam(':visibility_partyitem', $vis, PDO::PARAM_INT);
+                            $req->bindParam(':id_type_partyitem', $ity, PDO::PARAM_INT);
+                            $req->execute();
     }
 catch(exception $e){
     die('error:'.$e->getMessage());
     }
 }
 
-public function partyitemExist($bdd){
-    $checkItem = $bdd->prepare('SELECT * FROM partyitem WHERE name_partyitem = :name_partyitem');
-    $checkItem->execute(array(
-                         ':name_partyitem'=>$this->name_partyitem 
-                         ));
+public function partyitemExist($bdd, $name){
+    $checkItem = $bdd->prepare('SELECT image_partyitem, name_partyitem, description_partyitem FROM partyitem 
+                                WHERE name_partyitem = :name_partyitem');
+    $checkItem ->bindParam(':name_partyitem',$name);
+    $checkItem->execute();
     $result=$checkItem->fetch();
 
     if($result){

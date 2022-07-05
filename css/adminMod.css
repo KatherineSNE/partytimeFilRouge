@@ -41,7 +41,7 @@ form{
 }
 form{
     display: grid;
-    grid-template-columns:1fr 1fr 1fr 0.5fr 0.5fr 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr 0.5fr 0.5fr 1fr;
     grid-template-rows: auto;
     gap: 2vw 2vh;
     padding: 4vh;
@@ -64,19 +64,21 @@ input[name=image_partyitem]{
 textarea{
     grid-column: 3;
     grid-row: auto;
-    width:15vw;
+    width:25vw;
 }
 
 input[name=visibility_partyitem]{
     grid-column: 4;
     grid-row: auto;
     width: 2vw;
+    justify-self: center;
 }
 
 input[name=id_type_partyitem]{
     grid-column: 5;
     grid-row: auto;
     width: 2vw;
+    justify-self: center;
  
 }
 input[name=update_db]{
@@ -90,6 +92,7 @@ input[name=update_db]{
     cursor: pointer;
     border-top-right-radius:20px;
     border-bottom-left-radius: 20px;
+    justify-self: center;
 }
 
 input[name=choose]{

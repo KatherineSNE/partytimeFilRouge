@@ -14,8 +14,7 @@ let g = document.createElement("textArea");//description
 let t = document.createElement("input");//visibility
 let h = document.createElement("input");//type
 let j = document.createElement("input");//send
-let k = document.createElement("input");//send
-let l = document.createElement("input");//send
+
 
 
 b.setAttribute("src","./image/"+infoparty[i].image_partyitem+"");
@@ -58,13 +57,7 @@ j.setAttribute("type","submit");
 j.setAttribute("name", "update_db");
 j.setAttribute("value","Update");
 
-k.setAttribute("type","checkbox");
-k.setAttribute("name", "choose");
 
-
-l.setAttribute("type","submit");
-l.setAttribute("name", "del_db");
-l.setAttribute("value","Delete");
 
 
 a.appendChild(b);
@@ -76,8 +69,7 @@ c.appendChild(g);
 c.appendChild(t);
 c.appendChild(h);
 c.appendChild(j);
-c.appendChild(k);
-c.appendChild(l);
+
 
 
 

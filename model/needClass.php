@@ -29,14 +29,14 @@ public function setType($idType){
 
 
 
-public function createNeed($bdd){
+public function createNeed($bdd, $nmne, $tyne){
         try{
             $req=$bdd->prepare('INSERT INTO need(name_need,id_type_need)
                                 VALUES(:name_need,:id_type_need)');
-            $req->execute(array(
-                                ':name_need'=>$this->name_need,
-                                ':id_type_need'=>$this->id_type_need,
-                                ));
+            $req->bindParam(':name_need', $nmne, PDO::PARAM_STR);
+            $req->bindParam(':id_type_need',$tyne, PDO::PARAM_INT);
+            $req->execute();
+                                                    
         }
             catch(exception $e){
                 die('error:'.$e->getMessage());

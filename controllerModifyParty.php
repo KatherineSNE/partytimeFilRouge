@@ -4,6 +4,7 @@ include './model/partyitemClass.php';
 include './model/haveClass.php';
 include './view/modifyPartyItem.php';
 
+
 if(isset($_POST['name_partyitem'])&&isset($_POST['image_partyitem'])
 &&isset($_POST['description_partyitem'])&&isset($_POST['visibility_partyitem'])&&isset($_POST['id_type_partyitem'])){
       $partymod = new Partyitem();

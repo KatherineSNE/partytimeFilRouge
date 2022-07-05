@@ -121,6 +121,7 @@
                 <link rel="stylesheet" href="./css/adminAdd.css">
                 <link rel="stylesheet" href="./css/forms.css">
                 <script src="./scripts/admin.js" defer></script>
+                <link rel="icon" href="./image/yicon.jpg" type="image/x-icon">
                 <title>Whoop new Party!</title>
                 </head>
     <?php
@@ -132,6 +133,7 @@
                 <link rel="stylesheet" href="./css/adminMod.css">
                 <link rel="stylesheet" href="./css/forms.css">
                 <script src="./scripts/adminMod.js" defer></script>
+                <link rel="icon" href="./image/yicon.jpg" type="image/x-icon">
                 <title>Update Party!</title>
                 </head>
     <?php
@@ -141,6 +143,7 @@
                 <link rel="stylesheet" href="./css/mainO.css">
                 <link rel="stylesheet" href="./css/Planner.css">
                 <script src="./scripts/planner.js" defer></script>
+                <link rel="icon" href="./image/yicon.jpg" type="image/x-icon">
                 <title>Update Party!</title>
                 </head>
             <?php

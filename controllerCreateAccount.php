@@ -7,6 +7,7 @@ include './view/createuser.php';
 
 
 
+
 if(isset($_POST['name_user'])&&isset($_POST['surname_user'])&&
    isset($_POST['email_user'])&&($_POST['password_user'])&&isset($_POST['id_rights'])){
        
